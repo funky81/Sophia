@@ -1,0 +1,2 @@
+rrdtool update 1.rrd N:20
+rrdtool graph ../app/static/rrd/1_h.png --start -1h DEF:temp=1.rrd:temp:AVERAGE LINE1:temp#0000FF:"Temperature [deg C]"

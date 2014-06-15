@@ -21,3 +21,7 @@ def show_node(id):
     flash('Node with ID '+ id + ' not found')
     return redirect(url_for('index'))
   return render_template('node.html',node=node)
+  
+@app.route('/graph/<id>')
+def show_graph(id):
+  return render_template('graph.html',fileName=id+"_h.png")
